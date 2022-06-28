@@ -1,6 +1,6 @@
 FROM openjdk:17-jdk-alpine
-RUN addgroup -S spring && adduser -S spring -G spring
-USER spring:spring
+#RUN addgroup -S spring && adduser -S spring -G spring
+#USER spring:spring
 ARG JAR_FILE=build/libs/api-0.0.1-SNAPSHOT.jar
 ARG MEMORY_USE
 ENV MEMORY_USE=$MEMORY_USE

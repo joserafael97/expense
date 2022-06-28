@@ -24,6 +24,8 @@ repositories {
     maven { url = uri("https://repo.spring.io/snapshot") }
 }
 
+extra["springCloudVersion"] = "2021.0.3"
+
 dependencies {
     implementation(project(":domain"))
     implementation(project(":persistence"))
@@ -37,11 +39,20 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.springframework.boot:spring-boot-starter-aop")
+    implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
+    implementation("org.springframework.boot:spring-boot-starter-logging")
+    implementation("net.logstash.logback:logstash-logback-encoder:7.2")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("io.micrometer:micrometer-registry-prometheus")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+}
+
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+    }
 }
 
 tasks.withType<KotlinCompile> {

@@ -1,6 +1,4 @@
-import org.jetbrains.kotlin.com.intellij.openapi.vfs.StandardFileSystems.jar
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
 
 plugins {
     id("org.springframework.boot") version "2.7.0"
@@ -30,6 +28,7 @@ repositories {
     maven { url = uri("https://repo.spring.io/milestone") }
     maven { url = uri("https://repo.spring.io/snapshot") }
 }
+
 
 dependencies {
     implementation(project(":domain"))

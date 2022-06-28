@@ -27,6 +27,7 @@ services:
     image: expense-app
     restart: always
     environment:
+      - LOGGING_FILE=/logs/logfile.log
       - SPRING_PROFILES_ACTIVE=dev
       - PORT=9000
     ports:
@@ -35,6 +36,8 @@ services:
     expose:
       - 9000
       - 8080
+    volumes:
+      - log_volume:/logs
     networks:
       - expense-app-dev-network
     depends_on:
@@ -62,6 +65,30 @@ services:
     networks:
       - expense-app-dev-network
     restart: unless-stopped
+  splunk:
+    image: splunk/splunk
+    hostname: splunk
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_USER=root
+      - SPLUNK_PASSWORD=124932049
+      - SPLUNK_ENABLE_LISTEN=9997
+    ports:
+      - "8000:8000"
+  splunkforwarder:
+    image: splunk/universalforwarder:6.5.3-monitor
+    hostname: splunkforwarder
+    environment:
+      - SPLUNK_START_ARGS=--accept-license --answer-yes
+      - SPLUNK_FORWARD_SERVER=splunk:9997
+      - SPLUNK_USER=root
+      - SPLUNK_PASSWORD=124932049
+      - SPLUNK_ADD=monitor /logs
+    restart: always
+    depends_on:
+      - splunk
+    volumes:
+      - log_volume:/logs
 
 networks:
   expense-app-dev-network:
@@ -69,3 +96,4 @@ networks:
 volumes:
   prometheus-data:
   grafana-data:
+  log_volume:

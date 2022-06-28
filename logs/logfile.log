@@ -1,0 +1,55 @@
+2022-06-28 18:10:47.155  INFO [,,] 23876 --- [restartedMain] br.com.jrafael.api.ExpenseApplicationKt  : Starting ExpenseApplicationKt using Java 17.0.2 on DESKTOP-527298G with PID 23876 (E:\Users\joser\Documents\WORKSPACE\Personal\finance\now\expense\api\build\classes\kotlin\main started by joser in E:\Users\joser\Documents\WORKSPACE\Personal\finance\now\expense)
+2022-06-28 18:10:47.169  INFO [,,] 23876 --- [restartedMain] br.com.jrafael.api.ExpenseApplicationKt  : The following 1 profile is active: "dev"
+2022-06-28 18:10:47.343  INFO [,,] 23876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-28 18:10:47.343  INFO [,,] 23876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-28 18:10:48.616  INFO [,,] 23876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-28 18:10:48.713  INFO [,,] 23876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interfaces.
+2022-06-28 18:10:49.794  INFO [,,] 23876 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=93a19425-e173-3db6-9316-3cd76e0b51f7
+2022-06-28 18:10:51.269  INFO [,,] 23876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-28 18:10:51.284  INFO [,,] 23876 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-28 18:10:51.285  INFO [,,] 23876 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-28 18:10:51.432  INFO [,,] 23876 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-28 18:10:51.432  INFO [,,] 23876 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4086 ms
+2022-06-28 18:10:52.028  INFO [,,] 23876 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-28 18:10:52.257  INFO [,,] 23876 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-28 18:10:52.282  INFO [,,] 23876 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ccd35f21-e8aa-4c0a-86fe-691d9f66dbc3'
+2022-06-28 18:10:54.124  INFO [,,] 23876 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.11 by Redgate
+2022-06-28 18:10:54.124  INFO [,,] 23876 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.11
+2022-06-28 18:10:54.124  INFO [,,] 23876 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : 
+2022-06-28 18:10:54.140  INFO [,,] 23876 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:ccd35f21-e8aa-4c0a-86fe-691d9f66dbc3 (H2 2.1)
+2022-06-28 18:10:54.195  WARN [,,] 23876 --- [restartedMain] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-06-28 18:10:54.225  INFO [,,] 23876 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.016s)
+2022-06-28 18:10:54.233  INFO [,,] 23876 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-06-28 18:10:54.271  INFO [,,] 23876 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-06-28 18:10:54.276  INFO [,,] 23876 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - Create All Tables"
+2022-06-28 18:10:54.287  INFO [,,] 23876 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.018s)
+2022-06-28 18:10:54.474  INFO [,,] 23876 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-28 18:10:54.575  INFO [,,] 23876 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-28 18:10:54.808  INFO [,,] 23876 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-28 18:10:54.960  INFO [,,] 23876 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-06-28 18:10:55.447  INFO [,,] 23876 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-28 18:10:55.462  INFO [,,] 23876 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-28 18:10:56.665  WARN [,,] 23876 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-28 18:11:00.328  INFO [,,] 23876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-28 18:11:01.032  INFO [,,] 23876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-28 18:11:01.387  INFO [,,] 23876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2022-06-28 18:11:01.388  INFO [,,] 23876 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-28 18:11:01.389  INFO [,,] 23876 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-28 18:11:01.445  INFO [,,] 23876 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-28 18:11:01.445  INFO [,,] 23876 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 162 ms
+2022-06-28 18:11:01.457  INFO [,,] 23876 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
+2022-06-28 18:11:02.116  INFO [,,] 23876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2022-06-28 18:11:02.407  INFO [,,] 23876 --- [restartedMain] br.com.jrafael.api.ExpenseApplicationKt  : Started ExpenseApplicationKt in 18.075 seconds (JVM running for 19.494)
+2022-06-28 18:11:02.723  INFO [,,] 23876 --- [RMI TCP Connection(8)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-28 18:11:02.723  INFO [,,] 23876 --- [RMI TCP Connection(8)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-28 18:11:02.728  INFO [,,] 23876 --- [RMI TCP Connection(8)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-06-28 18:11:12.023  INFO [,67f94b4bd1ed5faa,67f94b4bd1ed5faa] 23876 --- [http-nio-8080-exec-2] b.c.j.api.controllers.ExpenseController  : Log sent to splunk!!
+2022-06-28 18:11:12.024  INFO [,67f94b4bd1ed5faa,67f94b4bd1ed5faa] 23876 --- [http-nio-8080-exec-2] b.c.j.api.adapters.LoggableAdapter       : process to create a new expense started
+2022-06-28 18:11:12.026  INFO [,67f94b4bd1ed5faa,67f94b4bd1ed5faa] 23876 --- [http-nio-8080-exec-2] b.c.j.api.adapters.LoggableAdapter       : process to validate finished
+2022-06-28 18:11:12.848  INFO [,1ed50fe74e9241e1,1ed50fe74e9241e1] 23876 --- [http-nio-8080-exec-3] b.c.j.api.controllers.ExpenseController  : Log sent to splunk!!
+2022-06-28 18:11:12.848  INFO [,1ed50fe74e9241e1,1ed50fe74e9241e1] 23876 --- [http-nio-8080-exec-3] b.c.j.api.adapters.LoggableAdapter       : process to create a new expense started
+2022-06-28 18:11:12.849  INFO [,1ed50fe74e9241e1,1ed50fe74e9241e1] 23876 --- [http-nio-8080-exec-3] b.c.j.api.adapters.LoggableAdapter       : process to validate finished
+2022-06-28 18:12:55.028  INFO [,,] 23876 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-28 18:12:55.249  WARN [,,] 23876 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+2022-06-28 18:12:55.251  INFO [,,] 23876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-28 18:12:55.260  INFO [,,] 23876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

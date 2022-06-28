@@ -6,18 +6,21 @@ import br.com.jrafael.common.BaseController
 import br.com.jrafael.domain.entities.Expense
 import br.com.jrafael.domain.service.ExpenseService
 import io.micrometer.core.annotation.Timed
+import org.apache.logging.log4j.LogManager
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
-import java.math.BigDecimal
 import javax.validation.Valid
 
 @RestController
 @RequestMapping("/v1/api/expenses")
 class ExpenseController(@Autowired var expenseService: ExpenseService) : BaseController<Expense, ExpenseDto>() {
 
+    private val logger = LogManager.getLogger()
+
     @Timed(value = "expenses.time", description = "Time create new expense")
     @PostMapping
     fun post(@RequestBody @Valid form: ExpenseFormDto): ExpenseDto {
+        logger.info("Log sent to splunk!!");
         return convert(expenseService.create(form.convert()))
     }
 

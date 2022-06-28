@@ -1,0 +1,71 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:9.6.16
+    restart: always
+    command: -p 5441
+    ports:
+      - 5441:5441
+    environment:
+      - POSTGRES_PASSWORD=4b28121d3c291f5c2b561ddc3e999cf589ddbe6472e202edf058106d069fc74e
+      - POSTGRES_USER=expense-app87%w2
+      - POSTGRES_DB=expense-app
+    expose:
+      - 5441
+    networks:
+      - expense-app-dev-network
+  expense-app:
+    container_name: expense-app
+    build:
+      args:
+        - PORT=9000
+        - SPRING_PROFILES_ACTIVE=dev
+        - MEMORY_USE=
+      dockerfile: ./Dockerfile
+      context: ./api
+    image: expense-app
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - PORT=9000
+    ports:
+      - "9000:9000"
+      - "8080:8080"
+    expose:
+      - 9000
+      - 8080
+    networks:
+      - expense-app-dev-network
+    depends_on:
+      - postgres
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./:/etc/prometheus
+      - prometheus-data:/prometheus
+    command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml
+    depends_on:
+        - expense-app
+    networks:
+      - expense-app-dev-network
+    restart: always
+  grafana:
+    image: grafana/grafana:7.5.7
+    ports:
+      - "5000:3000"
+    volumes:
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - grafana-data:/var/lib/grafana
+    networks:
+      - expense-app-dev-network
+    restart: unless-stopped
+
+networks:
+  expense-app-dev-network:
+    driver: bridge
+volumes:
+  prometheus-data:
+  grafana-data:

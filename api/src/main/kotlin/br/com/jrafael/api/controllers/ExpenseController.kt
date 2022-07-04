@@ -20,15 +20,14 @@ class ExpenseController(@Autowired var expenseService: ExpenseService) : BaseCon
     @Timed(value = "expenses.time", description = "Time create new expense")
     @PostMapping
     fun post(@RequestBody @Valid form: ExpenseFormDto): ExpenseDto {
-        logger.info("Log sent to splunk!!");
         return convert(expenseService.create(form.convert()))
     }
 
 
     @Timed(value = "expenses.time", description = "Time taken to return expenses list")
     @GetMapping
-    fun get(): List<Expense> {
-        return expenseService.get()
+    fun get(): List<ExpenseDto> {
+        return expenseService.get().map { convert(it) }
     }
 
     override fun convert(entity: Expense): ExpenseDto = ExpenseDto(
